@@ -1,0 +1,10 @@
+RewriteEngine on
+Rewritebase /news/
+RewriteRule ^vi/$  index.php?lang=vi [L]
+RewriteRule ^en/$  index.php?lang=en [L]
+
+RewriteRule ^songdep/$  index.php?p=cat&idLT=12  [L]	
+RewriteRule ^bv/(.*)\.html$ index.php?p=detail&TieuDe_KhongDau=$1
+RewriteRule ^cat/(.*)/(.*)/$  index.php?p=cat&Ten_KhongDau=$1&pageNum=$2 [L]
+RewriteRule ^cat/(.*)/$  index.php?p=cat&Ten_KhongDau=$1&pageNum=1  [L]
+RewriteRule ^lien-he/$  index.php?p=lienhe [L]	
